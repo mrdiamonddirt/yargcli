@@ -3,7 +3,7 @@ const input = yargs.argv;
 
 function Movie(argVec) {
     if (argVec === 'add') {
-      const newMovie = new Movie(argVec[0], argVec[1])
+      const newMovie = new Movie(argVec.actor, argVec.title)
       newMovie.add();
     }
 }
