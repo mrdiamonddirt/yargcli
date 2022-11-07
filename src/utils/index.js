@@ -1,13 +1,15 @@
-const yargs = require('yargs')
-const input = yargs.argv;
+const movieArray = [];
 
-function Movie(argVec) {
-    if (argVec === 'add') {
-      const newMovie = new Movie(argVec.actor, argVec.title)
-      newMovie.add();
-    }
+class Movie {
+  constructor(title, actor = "not specified") {
+    this.title = title;
+    this.actor = actor;
+  }
+  add() {
+    movieArray.push(this)
+    // console.log(this)
+    console.table(movieArray)
+  }
 }
-
-Movie(input)
 
 module.exports = Movie;
