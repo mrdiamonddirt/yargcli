@@ -9,11 +9,6 @@
 // Stretch goal - Add multiple movies.
 
 const yargs = require('yargs')
+// const Movie = require('./utils/index');
 
-const input = yargs.argv;
-//  console.table(yargs.argv.actor)
-//  console.table(yargs.argv.filmTitle)
-
-if (input.actor) {
-    console.log(`${input.actor} is in the film ${input.filmTitle}`)
-}
+console.table(yargs.argv)
