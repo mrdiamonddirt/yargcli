@@ -9,12 +9,16 @@
 // Stretch goal - Add multiple movies.
 
 const yargs = require('yargs')
+// import movie object
 const Movie = require('./utils/index');
 
+
 function myApp(yargsobj) {
+    // if command add, add one movie
     if (yargsobj.add) {
         const newMovie = new Movie(yargsobj.title, yargsobj.actor)
         newMovie.add()
+    // if command addmulti, expect 3 movies
     } else if (yargsobj.addmulti) {
         const newMovie1 = new Movie(yargsobj.title1, yargsobj.actor1)
         newMovie1.add()
@@ -25,4 +29,5 @@ function myApp(yargsobj) {
     }
     
 }
+// run function passing arguments
 myApp(yargs.argv)
